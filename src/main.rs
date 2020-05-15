@@ -9,7 +9,7 @@ fn main() {
 }
 
 
-fn get_user_input() -> u32 {
+fn get_user_input() -> usize {
     let mut user_input = String::new();
 
     println!("Enter number:");
@@ -21,19 +21,18 @@ fn get_user_input() -> u32 {
     return user_input.trim().parse().expect("Please type number!");
 }
 
-// TODO: remove usize everywhere
-fn calc_prime(n: u32) -> Vec<u32> {
-    let mut init_numbers: Vec<u32> = (0..n + 1).collect();
+fn calc_prime(n: usize) -> Vec<usize> {
+    let mut init_numbers: Vec<usize> = (0..n + 1).collect();
     init_numbers[1] = 0;
-    let mut result: Vec<u32> = Vec::new();
+    let mut result: Vec<usize> = Vec::new();
 
     let mut i = 2;
     while i <= n {
-        if init_numbers[i as usize] != 0 {
-            result.push(init_numbers[i as usize]);
+        if init_numbers[i] != 0 {
+            result.push(init_numbers[i]);
 
-            for j in (i..n + 1).step_by(i as usize) {
-                init_numbers[j as usize] = 0;
+            for j in (i..n + 1).step_by(i) {
+                init_numbers[j] = 0;
             }
         }
         i += 1;
