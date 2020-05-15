@@ -1,3 +1,5 @@
+#![feature(test)]
+
 use std::io;
 
 fn main() {
@@ -20,7 +22,6 @@ fn get_user_input() -> u32 {
 }
 
 // TODO: remove usize everywhere
-// TODO: write benchmarks
 fn calc_prime(n: u32) -> Vec<u32> {
     let mut init_numbers: Vec<u32> = (0..n + 1).collect();
     init_numbers[1] = 0;
@@ -44,6 +45,8 @@ fn calc_prime(n: u32) -> Vec<u32> {
 #[cfg(test)]
 mod tests {
     use super::calc_prime;
+    extern crate test;
+    use test::Bencher;
 
     #[test]
     fn should_return_prime_number_before_ten() {
@@ -58,5 +61,20 @@ mod tests {
     #[test]
     fn should_correct_works_on_1000_primes_numbers() {
         calc_prime(1000).len();
+    }
+
+    #[bench]
+    fn benchmark_for_10_elements(bencher: &mut Bencher) {
+        bencher.iter(|| calc_prime(10));
+    }
+
+    #[bench]
+    fn benchmark_for_1000_elements(bencher: &mut Bencher) {
+        bencher.iter(|| calc_prime(1000));
+    }
+
+    #[bench]
+    fn benchmark_for_million_elements(bencher: &mut Bencher) {
+        bencher.iter(|| calc_prime(1_000_000));
     }
 }

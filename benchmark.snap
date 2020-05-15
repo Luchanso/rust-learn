@@ -1,0 +1,11 @@
+
+running 6 tests
+test tests::should_correct_works_on_1000_primes_numbers ... ignored
+test tests::should_return_25_prime_numbers ... ignored
+test tests::should_return_prime_number_before_ten ... ignored
+test tests::benchmark_for_1000_elements    ... bench:       3,133 ns/iter (+/- 248)
+test tests::benchmark_for_10_elements      ... bench:         252 ns/iter (+/- 13)
+test tests::benchmark_for_million_elements ... bench:   6,566,930 ns/iter (+/- 2,202,500)
+
+test result: ok. 0 passed; 0 failed; 3 ignored; 3 measured; 0 filtered out
+
