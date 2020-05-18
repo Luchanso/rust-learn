@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install nightly toolchain
+        run: rustup toolchain install nightly --force
+      - name: Set nightly toolchain
+        run: rustup default nightly
       - name: Linting
         run: cargo clippy -- -D warnings
       - name: Build
