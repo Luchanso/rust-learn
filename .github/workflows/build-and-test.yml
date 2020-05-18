@@ -17,6 +17,8 @@ jobs:
         run: rustup self update
       - name: Set nightly toolchain
         run: rustup default nightly
+      - name: Add clippy component
+        run: rustup component add clippy
       - name: Linting
         run: cargo clippy -- -D warnings
       - name: Build
