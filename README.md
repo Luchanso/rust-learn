@@ -33,10 +33,10 @@ see in benchmark.snap
 # WIP
 - [] automation
     - [] CI/CD
-        - [] set nightly Rust
-        - [] linting
-        - [] building
-        - [] testing
+        - [x] set nightly Rust
+        - [x] linting
+        - [x] building
+        - [x] testing
         - [] benchmarks
     - [] scripts
         - [] build, test, in single command
