@@ -18,7 +18,7 @@ fn get_user_input() -> usize {
         .read_line(&mut user_input)
         .expect("Failed to read line");
 
-    return user_input.trim().parse().expect("Please type number!");
+    user_input.trim().parse().expect("Please type number!");
 }
 
 fn calc_prime(n: usize) -> Vec<usize> {
@@ -38,7 +38,7 @@ fn calc_prime(n: usize) -> Vec<usize> {
         i += 1;
     }
 
-    return result;
+    result;
 }
 
 #[cfg(test)]
