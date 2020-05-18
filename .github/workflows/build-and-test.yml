@@ -11,11 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Add components
-        run: rustup component add clippy
-      - name: Build
-        run: cargo build --verbose
       - name: Linting
         run: cargo clippy -- -D warnings
+      - name: Build
+        run: cargo build --verbose
       - name: Run tests
         run: cargo test --verbose
