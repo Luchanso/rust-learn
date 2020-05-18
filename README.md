@@ -43,6 +43,6 @@ see in benchmark.snap
         - [ ] benchmarks
 - [ ] algorithm
     - [ ] Sieve of Atkin
-    - [ ] Sieve of Eratosthenes
+    - [x] Sieve of Eratosthenes
 - [ ] tests
     - [ ] coverage
