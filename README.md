@@ -29,3 +29,18 @@ cargo bench
 
 # benchmark result
 see in benchmark.snap
+
+# WIP
+- [] automation
+    - [] CI/CD
+        - [] set nightly Rust
+        - [] linting
+        - [] building
+        - [] testing
+        - [] benchmarks
+    - [] scripts
+        - [] build, test, in single command
+        - [] benchmarks
+- [] algorithm
+    - [] Sieve of Atkin
+    - [] Sieve of Eratosthenes
