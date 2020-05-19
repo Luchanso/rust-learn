@@ -12,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install nightly toolchain
-        run: rustup toolchain install nightly --force
+        run: rustup toolchain install nightly-2020-05-15 --force
       - name: Update rustup
         run: rustup self update
       - name: Set nightly toolchain
-        run: rustup default nightly
+        run: rustup default nightly-2020-05-15
       - name: Add clippy component
         run: rustup component add clippy
       - name: Linting
