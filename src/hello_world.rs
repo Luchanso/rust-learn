@@ -8,6 +8,6 @@ pub fn generate_file() -> std::io::Result<()> {
         .append(true)
         .open("hello.txt")
         .unwrap();
-    bla.write(b"Hello world!")?;
+    bla.write_all(b"Hello world!")?;
     Ok(())
 }
